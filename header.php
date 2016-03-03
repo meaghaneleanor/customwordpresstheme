@@ -13,18 +13,22 @@
 
 <body <?php body_class(); ?>>
 
-<header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
+<header><!--Start of Header-->
+  <div class="wrapper"><!--Start of /.wrapper-->
+      <a href="<?php echo home_url( '/' ); ?>">
+      <div class="logo">
+      </div>
       </a>
-    </h1>
+    
+    <nav class="navHeader">
+      <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_location' => 'primary'
+      )); ?>  
+    </nav>
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
-  </div> <!-- /.container -->
+    <div class="headerBottom"></div>
+
+  </div> <!-- /.wrapper -->
 </header><!--/.header-->
 
