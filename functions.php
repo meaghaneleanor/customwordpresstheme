@@ -50,7 +50,7 @@ function hackeryou_styles(){
 
 	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
-	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Raleway');
+	wp_enqueue_style('googlefonts2', 'https://fonts.googleapis.com/css?family=Raleway');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -174,10 +174,17 @@ function hackeryou_widgets_init() {
 		'name' => 'Primary Widget Area',
 		'id' => 'primary-widget-area',
 		'description' => 'The primary widget area',
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'News Widget Area',
+		'id'            => 'news-widget-area',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="newsTitle">',
+		'after_title'   => '</h2>',
 	) );
 
 }
@@ -281,3 +288,15 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+/* hackeryou_get_thumbnail_url: Return current post thumbnail URL */
+function hackeryou_get_thumbnail_url($post) {
+	$imageID = get_post_thumbnail_id($post->ID);
+	$imageURL = wp_get_attachment_url($imageID);
+	return $imageURL;
+}
+
+
+
+
+
