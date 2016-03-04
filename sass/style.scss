@@ -7,6 +7,8 @@
 * Author URI: http://hackeryou.com
 */
 
+@import "flickity";
+
 //////FONTS/////
 $Roboto: 'Roboto Condensed', sans-serif;
 $Raleway:'Raleway', sans-serif;
@@ -15,6 +17,7 @@ $Raleway:'Raleway', sans-serif;
 $lightBlue: #E7F3F7;
 $red: #EF634B;
 $darkGrey: #4A4A4A;
+
 
 
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
@@ -53,7 +56,7 @@ body {
 			font-family: $Roboto;
 			text-transform: uppercase;
 			color: $red;
-			padding: 1.5rem 0;
+			padding: 2rem 0;
 			font-size: 1.2rem;
 			&:hover {
 				text-decoration: underline;
@@ -61,7 +64,7 @@ body {
 			a {
 				text-decoration: none;
 				color: $red;
-				padding: 1.5rem 3rem;
+				padding: 2rem 3rem;
 			}
 		}
 	}
@@ -245,7 +248,7 @@ div.tagcloud {
 div.newsContainer {
 	display: flex;
 	flex-direction: row;
-	h3 {
+	h2 {
 		text-align: center;
 		border: .2rem solid $red;
 		width: 90%;
@@ -257,6 +260,13 @@ div.newsContainer {
 		font-family: $Roboto;
 		letter-spacing: .8rem;
 		border-radius: .5rem;
+		a {
+			text-decoration: none;
+			color: $darkGrey;
+			&:hover {
+				color: $red;
+			}
+		}
 	}
 	h5 {
 		text-align: center;
@@ -270,6 +280,9 @@ div.newsContainer {
 		text-transform: uppercase;
 		font-size: 1.2rem;
 		letter-spacing: .8rem;
+		a {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -281,11 +294,54 @@ div.newsContent {
 		margin: 0 auto;
 		margin-top: 2rem;
 	}
+	article {
+		padding-top: 1.5rem;
+		padding-bottom: 2rem;
+	}
 }
 
 div.newsSidebar {
 	width: 30%;
 	border-left: .2rem solid $red;
 	border-right: .2rem solid $red;
-	padding: 2rem 0;
+	padding: 2rem .8rem;
+	margin: 0 auto;
+	div {
+		ul {
+			list-style-type: none;
+			padding-left: 0;
+			li {
+				padding: .5rem 0;
+				text-align: center;
+				a {
+					text-decoration: none;
+					color: $darkGrey;
+					text-transform: uppercase;
+					font-size: .9rem;
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
 }
+
+section.entry-content {
+	p {
+		width: 85%;
+		margin: 0 auto;
+		font-size: 1.2rem;
+		line-height: 2rem;
+		text-align: left;
+		font-family: $Roboto;
+		padding: .5rem;
+		img {
+			margin-top: .4rem;
+			width: 90%;
+			height: 100%;
+		}
+	}
+}
+
+

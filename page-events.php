@@ -11,7 +11,7 @@ get_header();  ?>
       <div class="content">
 
         <div class="eventsSidebar">
-          <?php get_sidebar('primary-widget-area'); ?>
+          <?php dynamic_sidebar('primary-widget-area'); ?>
         </div>
 
         <div class="eventsMain">
@@ -24,7 +24,8 @@ get_header();  ?>
             <?php 
             //Set of arguments or options for a new query(loop)
             $eventArgs = array(
-              'category_name' => 'event' 
+              'category_name' => 'event' ,
+              'posts_per_page' => 4
             );
             //Create the new query(loop)
             $eventLoop = new WP_Query($eventArgs);

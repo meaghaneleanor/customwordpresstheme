@@ -78,6 +78,7 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
+
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
@@ -86,6 +87,7 @@ function hackeryou_scripts() {
     true //load in footer
   );
 }
+
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
 
@@ -139,7 +141,7 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <a href="'. get_permalink() . '">Read More <span class="meta-nav">&rarr;</span></a>';
 }
 
 /**

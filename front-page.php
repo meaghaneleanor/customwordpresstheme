@@ -22,11 +22,38 @@
 
       <?php endwhile; // end the loop?>
   </div> <!-- /.mainContent end-->
-  </div> <!-- /,content -->
+  </div> <!-- /.content -->
 
-</div>
+  <div class="aboutImages">
+   <?php //starting the loop 
 
- <!--    <?php get_sidebar(); ?> -->
+    $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => -1
+      );
+
+    $postImageQuery = new WP_Query($args);
+
+    if ($postImageQuery->have_posts()) while ($postImageQuery->have_posts()) :
+      $postImageQuery->the_post(); 
+
+      $postImage = hackeryou_get_thumbnail_url($post);
+
+      if ($postImage != '') {
+
+   ?>
+        <img src="<?php echo hackeryou_get_thumbnail_url($post) ?> " alt=""> 
+
+
+    <?php 
+
+      }
+      endwhile; //end the loop ?>
+
+  </div>
+</div><!-- /.wrapper -->
+
+
 
 
 <?php get_footer(); ?>

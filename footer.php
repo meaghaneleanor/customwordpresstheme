@@ -20,5 +20,6 @@
 </script>
 
 <?php wp_footer(); ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.2/flickity.pkgd.js"></script>
 </body>
 </html>
