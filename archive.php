@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
+<div class="wrapper">
 <div class="main">
   <div class="container">
-    <div class="content">
+    <div class="archivecontent">
 
       <?php if ( have_posts() ) the_post(); ?>
 
-      <h1>
+      <h1 class "archiveh1">
         <?php if ( is_day() ) : ?>
           Daily Archives: <?php the_date(); ?>
         <?php elseif ( is_month() ) : ?>
@@ -34,9 +35,8 @@
 
     </div><!--/content-->
 
-    <?php get_sidebar(); ?>
-
   </div> <!-- /.container -->
 </div> <!-- /.main -->
+</div>
 
 <?php get_footer(); ?>

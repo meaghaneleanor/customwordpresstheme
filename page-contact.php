@@ -13,14 +13,18 @@ get_header();  ?>
     <div class="aboutTop"></div>
   </div>
 
-<div class="contactMain">
-	<div class="hours">
-		<h2>Opening Hours</h2>
 
+
+<div class="contactMain">
+
+	<div class="hours">
+
+		<h2>Opening Hours</h2>
 		<div class="hoursContent">
+
+
 			<div class="leftHours">
 				<ul>
-					<li>Days</li>
 					<li>Monday</li>
 					<li>Tuesday</li>
 					<li>Wednesday</li>
@@ -29,30 +33,37 @@ get_header();  ?>
 					<li>Saturday</li>
 					<li>Sunday</li>
 				</ul>
+			</div>
+
 			<div class="rightHours">
 				<ul>
-					<li>Open // Close</li>
-					<li>12pm - 6pm</li>
-					<li>12pm - 6pm</li>
-					<li>12pm - 6pm</li>
-					<li>4pm - 1am</li>
-					<li>5pm - 2am</li>
+					<li>12pm  -  6pm</li>
+					<li>12pm  -  6pm</li>
+					<li>12pm  -  6pm</li>
+					<li>12pm  -  8pm</li>
+					<li>4pm  -  1am</li>
+					<li>5pm  -  2am</li>
 					<li>CLOSED</li>
 				</ul>
 			</div>
 
-			<div class="address">
-				<h2>Address</h2>
-				
-			</div>
-		</div>
-	</div>
+		</div><!--/.hoursContent -->
 
+			<div class="contactAddress">
+				<h2 class="h2address">Address</h2>
+				<p class="address">483 Queen Street West</p>
+				<p class="address2">Toronto, Ontario</p>
+			</div>
+
+	</div><!--/.hours-->
+	
 	<div class="contactForm">
 
-		<?php the_content() ?>
+		<div class="theForm">
+			<?php the_content() ?>
+		</div>3
 	</div>
-</div>
+</div> <!--/.contactMain-->
 
 </div><!--/.wrapper -->
 

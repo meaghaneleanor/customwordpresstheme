@@ -51,6 +51,8 @@
       endwhile; //end the loop ?>
 
   </div>
+
+  </div>
 </div><!-- /.wrapper -->
 
 

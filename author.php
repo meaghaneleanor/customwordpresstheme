@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 
+<div class="wrapper">
 <div class="main">
   <div class="container">
-    <div class="content">
+    <div class="archivecontent">
       <?php
       	/* Queue the first post, that way we know who
       	 * the author is when we try to get their name,
@@ -12,7 +13,7 @@
       		the_post();
       ?>
 
-      <h1>Author Archives:
+      <h1 class="archiveh1">Author Archives:
         <a class="name" href="<?php echo get_author_posts_url( get_the_author_meta('ID') ); ?>">
           <?php the_author(); ?>
         </a>
@@ -34,9 +35,8 @@
       	?>
     </div> <!-- /.content -->
 
-    <?php get_sidebar(); ?>
-
   </div> <!-- /.container -->
 </div> <!-- /.main -->
+</div><!--/.wrapper-->
 
 <?php get_footer(); ?>

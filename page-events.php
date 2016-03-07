@@ -33,12 +33,15 @@ get_header();  ?>
 
             while($eventLoop->have_posts()) {
               $eventLoop->the_post();          
-            ?>     
+            ?>  
+
+            <div class="singleEvent">   
               <img src="<?php echo hackeryou_get_thumbnail_url($post) ?>">
               <div class="eventsInfo">
                 <h3><?php the_title(); ?></h3>
-                <?php the_content(); ?>
+                <?php the_excerpt(); ?>
               </div>
+            </div>
 
             <?php } ?>  
           </div><!--/.events-?-->
